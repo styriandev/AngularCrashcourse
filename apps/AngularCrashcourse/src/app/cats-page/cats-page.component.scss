@@ -1,0 +1,8 @@
+.cat-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .cat-image {
+    width: 300px;
+  }
+}

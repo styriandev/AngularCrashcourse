@@ -1,0 +1,10 @@
+
+<div class="cat-list">
+  @if (cats()) {
+    @for (cat of cats(); track cat._id) {
+      <div class="cat-image">
+        <app-cat-image [catId]="cat._id"></app-cat-image>
+      </div>
+    }
+  }
+</div>
