@@ -11,8 +11,12 @@ export class CatsApiService {
   private getTagsUrl = 'https://cataas.com/api/tags';
   private httpClient = inject(HttpClient);
 
-  getAllCats(page: number): Observable<Cat[]> {
-    return this.httpClient.get<Cat[]>(this.getAllUrl);
+  getAllCats(page?: number, tags?: string[]): Observable<Cat[]> {
+    let url = this.getAllUrl;
+    if (tags) {
+      url += '&tags=' + tags.join(',');
+    }
+    return this.httpClient.get<Cat[]>(url);
   }
 
   getTags(): Observable<string[]> {

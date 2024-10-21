@@ -1,4 +1,4 @@
-
+<app-cat-filter [(selectedTag)]="selectedTag"/>
 <div class="cat-list">
   @if (cats()) {
     @for (cat of cats(); track cat._id) {

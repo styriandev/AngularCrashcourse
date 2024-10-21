@@ -1,0 +1,5 @@
+<select [(ngModel)]="selectedTag">
+  @for (tag of availableTags(); track tag) {
+    <option>{{tag}}</option>
+  }
+</select>
