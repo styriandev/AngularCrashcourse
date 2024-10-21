@@ -25,3 +25,5 @@ npx nx serve AngularCrashcourse
 If you use WebStorm I recommend using the NX Plugin for it (https://plugins.jetbrains.com/plugin/15000-nx-console-ui)
 
 
+# API for this project
+https://cataas.com/doc.html
