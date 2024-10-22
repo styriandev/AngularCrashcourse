@@ -1,2 +1,7 @@
 
-<router-outlet></router-outlet>
+<input type="text" [(ngModel)]="enteredFirstname" >
+{{ enteredFirstname }}
+<div>{{ person.firstname }} {{ person.lastname }}</div>
+<button (click)="changeLastname()">Ändern</button>
+<!--<app-cats-page />-->
+<!---->

@@ -1,4 +1,4 @@
-import { Component, inject, model } from '@angular/core';
+import { Component, inject, model, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatsApiService } from '../cat-service/cats-api.service';
 import { toSignal } from '@angular/core/rxjs-interop'
@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './cats-page.component.scss',
 })
 export class CatsPageComponent {
+  protected variable = 1;
   private catService = inject(CatsApiService);
 
   private currentPage = 0;
@@ -21,5 +22,4 @@ export class CatsPageComponent {
 
   protected cats = toSignal(this.cat$);
   protected availableTags = toSignal(this.availableTags$);
-
 }
